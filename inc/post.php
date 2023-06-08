@@ -6,6 +6,20 @@
         $db = new Database();
         $fm = new Format();
     ?>
+    <!--pagination-->
+    <?php
+    /*
+    $per_page = 2;
+    if (isset($_GET['page'])){
+        $page = $_GET['page'];
+    }else{
+        $page = 1;
+    }
+    $start_form = ($page-1) * $per_page;
+    */
+    ?>
+    <!--pagination-->
+
 
 <div class="col-lg-8">
 
@@ -35,7 +49,7 @@
     <!-- Nested row for non-featured blog posts-->
     <div class="row">
         <?php
-            $query_non_feature_post = "SELECT * FROM `post` ORDER BY `id` DESC LIMIT 10 OFFSET 1;";
+            $query_non_feature_post = "SELECT * FROM `post` ORDER BY `id` DESC LIMIT 4 OFFSET 1;";
             $post_data_non_feature_post = $db->select($query_non_feature_post);
             if ($post_data_non_feature_post){
             while ($non_feature_post_result = $post_data_non_feature_post->fetch_assoc())
@@ -55,6 +69,37 @@
         </div>
             <?php
                 }//end while loop
+
+                ?>
+                <?php
+                /*
+                    $query = "SELECT * FROM `post`";
+                    $result = $db->select($query);
+                    $total_rows = mysqli_num_rows($result);
+                    $total_pages = ceil($total_rows/$per_page);
+                ?>
+
+
+                <nav aria-label="Pagination">
+                    <hr class="my-0" />
+                    <ul class="pagination justify-content-center my-4">
+                        <li class="page-item"><a class="page-link" href="index.php?page=1" tabindex="-1">Newer</a></li>
+                        <?php
+                            for ($i = 1; $i<=$total_pages; $i++){
+                              ?>
+                       <li class="page-item" aria-current="page"><a class="page-link" href="index.php?page=<?= $i; ?>"><?= $i; ?></a></li>
+                        <?php
+                            }
+                        ?>
+
+
+                        <li class="page-item"><a class="page-link" href="index.php?page=<?=$total_pages?>">Older</a></li>
+                    </ul>
+                </nav>
+                <!-- Pagination-->
+                */?>
+
+                <?php
                 }else{
                     echo "<span class='bg-danger p-5'>Post Not Available</span>";
                 }
@@ -62,17 +107,6 @@
         <!-- Blog post end-->
 
     </div>
-    <!-- Pagination-->
-    <nav aria-label="Pagination">
-        <hr class="my-0" />
-        <ul class="pagination justify-content-center my-4">
-            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-            <li class="page-item"><a class="page-link" href="#!">2</a></li>
-            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-            <li class="page-item"><a class="page-link" href="#!">15</a></li>
-            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-        </ul>
-    </nav>
+
+
 </div>
