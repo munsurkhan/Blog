@@ -1,7 +1,5 @@
     <?php
-        include_once 'lib/config.php';
-        include_once 'lib/Database.php';
-        include_once 'helpers/Format.php';
+
 
         $db = new Database();
         $fm = new Format();
