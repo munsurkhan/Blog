@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7793a393-aef9-4714-b819-8990ea425833" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
-    </list>
+    <list default="true" id="7793a393-aef9-4714-b819-8990ea425833" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686239028741</updated>
       <workItem from="1686239029991" duration="3950000" />
-      <workItem from="1686382796381" duration="3353000" />
+      <workItem from="1686382796381" duration="3354000" />
     </task>
     <servers />
   </component>
