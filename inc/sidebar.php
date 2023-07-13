@@ -1,3 +1,6 @@
+<?php
+$db = new Database();
+?>
 <div class="col-lg-4">
     <!-- Search widget-->
     <div class="card mb-4">
@@ -14,18 +17,26 @@
         <div class="card-header">Categories</div>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-6">
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#!">Web Design</a></li>
-                        <li><a href="#!">HTML</a></li>
-                        <li><a href="#!">Freebies</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#!">JavaScript</a></li>
-                        <li><a href="#!">CSS</a></li>
-                        <li><a href="#!">Tutorials</a></li>
+                <div class="col-sm-12">
+                    <ul class="list-unstyled cat-list mb-0">
+                        <?php
+                            $query = "SELECT * FROM `category`";
+                            $category = $db->select($query);
+                            if ($category){
+                                while ($cat_result = $category->fetch_assoc()){
+                             ?>
+                          <li class="d-inline cat-badge"><a href="#"><?= $cat_result['name'];?></a></li>
+                        <?php
+                                }
+                                ?>
+                        <?php
+                            }else{
+                                ?>
+                        <li>Category not Found!</li>
+                        <?php
+                            }
+
+                        ?>
                     </ul>
                 </div>
             </div>

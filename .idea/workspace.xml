@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7793a393-aef9-4714-b819-8990ea425833" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "I:/xampp/htdocs/Admin Payroll",
+    "last_opened_file_path": "I:/xampp/htdocs/blog",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,6 +93,7 @@
       <workItem from="1686382796381" duration="3354000" />
       <workItem from="1686464520935" duration="6040000" />
       <workItem from="1686728365569" duration="631000" />
+      <workItem from="1689238653066" duration="6518000" />
     </task>
     <servers />
   </component>
