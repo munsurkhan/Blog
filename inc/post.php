@@ -1,10 +1,9 @@
-    <?php
+<?php
+$db = new Database();
+$fm = new Format();
+?>
 
-
-        $db = new Database();
-        $fm = new Format();
-    ?>
-    <!--pagination-->
+<!--pagination-->
     <?php
     /*
     $per_page = 2;
