@@ -1,3 +1,21 @@
+<?php
+include_once '../lib/Session.php';
+Session::checkSession();
+
+
+include_once '../lib/config.php';
+include_once '../lib/Database.php';
+include_once '../helpers/Format.php';
+$db = new Database();
+$fm = new Format();
+
+header("Cache-Control: no-cache, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+header("Cache-Control: max-age=2592000");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +41,11 @@
     </form>
     <!-- Navbar-->
     <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <?php
+            if (isset($_GET['action']) && $_GET['action'] == "logout"){
+                Session::destroy();
+            }
+        ?>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img
                     src="assets/img/3135715.png" alt=""></a>
@@ -30,7 +53,7 @@
                 <li><a class="dropdown-item" href="#!">Settings</a></li>
                 <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Logout</a></li>
+                <li><a class="dropdown-item" href="?action=logout">Logout</a></li>
             </ul>
         </li>
     </ul>
