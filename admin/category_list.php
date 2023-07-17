@@ -11,6 +11,20 @@
                             <div class="card-header">
                                 <b>Category List</b>
                             </div>
+
+                    <?php
+                        if (isset($_GET['deleteid'])){
+                            $deleteid = $_GET['deleteid'];
+                            $delQuery = "DELETE FROM `category` WHERE `id` = '$deleteid'";
+                            $delResult = $db->delete($delQuery);
+                            if ($delResult){
+                                 echo "<span class='text-success text-center'>Category Deleted Success!</span>";
+                                    }else{
+                                        echo "<span class='text-danger text-center'>Category not Deleted.</span>";
+                                    }
+                            }
+                    ?>
+
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
@@ -36,7 +50,7 @@
                                         <td><?= $result['name']; ?></td>
                                         <td><?= $fm->formatDate($result['createtime']); ?></td>
                                         <td>
-                                            <a class="btn btn-info btn-sm" href="editcat.php?catid=<?= $result['id']; ?>">Edit</a> || <a onclick="return confirm('Are you sure to Delete!');" class="btn btn-sm btn-danger" href="deletecat.php?deleteid=<?= $result['id']; ?>">Delete</a>
+                                            <a class="btn btn-info btn-sm" href="editcat.php?catid=<?= $result['id']; ?>">Edit</a> || <a onclick="return confirm('Are you sure to Delete!');" class="btn btn-sm btn-danger" href="?deleteid=<?= $result['id']; ?>">Delete</a>
                                         </td>
                                     </tr>
                                     <?php
