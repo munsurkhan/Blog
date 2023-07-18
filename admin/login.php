@@ -64,7 +64,7 @@
                                         <form action="" method="post" enctype="multipart/form-data">
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="userName" type="text" name="name" placeholder="Enter Your Username" />
-                                                <label for="userName">Your Name</label>
+                                                <label for="userName">Username</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Password" />
